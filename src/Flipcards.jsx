@@ -8,9 +8,9 @@ const YELLOW = '#FFFF65';
 const StyledCardsContainer = styled.div`
     opacity : ${props => props.completed ? '.3' : '1'}
     display : grid;
-    grid-template-columns: repeat(4, minmax(40px, 160px));
+    grid-template-columns: repeat(4, minmax(20px, 120px));
     grid-gap: 10px;
-    margin : 40px;
+    margin : 20px;
     height: calc( 100vh - 2 * 40px );
 `;
 
@@ -19,21 +19,14 @@ const StyledCardContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &::before {
-        content: "";
-        display: inline-block;
-        width: 1px;
-        height: 0;
-        padding-bottom : calc(100% / 3);
-    }
+    max-height: 150px;
 `;
 
 const StyledAlertContainer = styled(StyledCardsContainer)`
     opacity : 1;
     position: absolute;
     top : 0;
-    grid-template-rows: repeat(4,minmax(40px, auto));
+    grid-template-rows: repeat(4, minmax(40px, auto));
     color : rgb(77, 77, 77);
 	font-family : 'Work Sans', sans-serif;
 	font-weight : 300;
@@ -58,7 +51,7 @@ const StyledCard = styled(Card)(props => {
         // maxHeight : '100px',
         // flex: '1 90%',
         // minWidth : '60px',
-        width : '60%',
+        width : '80%',
         height: '90%'
 })});
 
